@@ -35,20 +35,24 @@
             this.enemy = new System.Windows.Forms.PictureBox();
             this.EnemyAttackTimer = new System.Windows.Forms.Timer(this.components);
             this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy)).BeginInit();
             this.SuspendLayout();
             // 
             // enemyHealthBar
             // 
-            this.enemyHealthBar.Location = new System.Drawing.Point(34, 45);
+            this.enemyHealthBar.Location = new System.Drawing.Point(34, 54);
             this.enemyHealthBar.Name = "enemyHealthBar";
             this.enemyHealthBar.Size = new System.Drawing.Size(208, 23);
             this.enemyHealthBar.TabIndex = 0;
             // 
             // playerHealthBar
             // 
-            this.playerHealthBar.Location = new System.Drawing.Point(454, 45);
+            this.playerHealthBar.Location = new System.Drawing.Point(452, 54);
             this.playerHealthBar.Name = "playerHealthBar";
             this.playerHealthBar.Size = new System.Drawing.Size(208, 23);
             this.playerHealthBar.TabIndex = 1;
@@ -78,7 +82,7 @@
             // EnemyAttackTimer
             // 
             this.EnemyAttackTimer.Enabled = true;
-            this.EnemyAttackTimer.Interval = 500;
+            this.EnemyAttackTimer.Interval = 600;
             this.EnemyAttackTimer.Tick += new System.EventHandler(this.EnemyAttackTimerEvent);
             // 
             // EnemyMoveTimer
@@ -87,13 +91,65 @@
             this.EnemyMoveTimer.Interval = 20;
             this.EnemyMoveTimer.Tick += new System.EventHandler(this.EnemyMoveTimerEvent);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(458, 616);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(264, 113);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "CONTROLS:\r\n\r\nRight Arrow Key: Right Hook\r\n\r\nLeft Arrow Key: Left Hook\r\n\r\nDown: Bl" +
+    "ock incoming attacks\r\n";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(53, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 50);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Tough Rob ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(473, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(173, 50);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Little Mac (You)";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(12, 571);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(264, 158);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Objective:\r\n\r\nTime your attacks to hit Tough Rob as he moves in front of you\r\n\r\nT" +
+    "ough Rob lives up to his name, so remember to time your attacks and blocks just " +
+    "right!\r\n\r\nGO GET \'EM, CHAMP!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PunchOutFP.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(734, 561);
+            this.ClientSize = new System.Drawing.Size(734, 738);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.player);
             this.Controls.Add(this.playerHealthBar);
             this.Controls.Add(this.enemyHealthBar);
@@ -118,5 +174,9 @@
         private PictureBox enemy;
         private System.Windows.Forms.Timer EnemyAttackTimer;
         private System.Windows.Forms.Timer EnemyMoveTimer;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }

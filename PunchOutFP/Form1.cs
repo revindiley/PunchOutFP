@@ -31,7 +31,7 @@ namespace PunchOutFP
 
                     if (enemy.Bounds.IntersectsWith(player.Bounds) && playerBlock == false)
                     {
-                        playerHealth -= 5;
+                        playerHealth -= 15;
                     }
                 break;
 
@@ -41,7 +41,7 @@ namespace PunchOutFP
 
                     if (enemy.Bounds.IntersectsWith(player.Bounds) && playerBlock == false)
                     {
-                        playerHealth -= 5;
+                        playerHealth -= 15;
                     }
                 break;
 
@@ -141,6 +141,11 @@ namespace PunchOutFP
             enemyHealth = 100;
 
             enemy.Left = 400;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
